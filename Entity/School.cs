@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace SchoolEntity
 
 {
@@ -27,7 +29,7 @@ namespace SchoolEntity
         public string city { get; set; }
         public string country { get; set; }
         public Type types { get; set; }
-        public Course[] courses { get; set; }
+        public List<Course> courses { get; set; }
 
         public override string ToString() {
             return $"Name : {Name}, Type : {types} \n Country : {country}, City : {city}";

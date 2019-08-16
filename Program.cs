@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using SchoolEntity;
 using Type = SchoolEntity.Type;
 
@@ -13,7 +14,7 @@ namespace ETAPA1
             school.country = "Colombia";
             school.types = Type.Garden;
 
-            school.courses = new Course[] {
+            school.courses = new List<Course>(){
                 new Course() {
                 name = "101"
                 },
@@ -25,10 +26,11 @@ namespace ETAPA1
                 }
             };
 
+
             printCourses(school.courses);
         }
 
-        public static void printCourses(Course[] courses)
+        public static void printCourses(List<Course> courses)
         {
             Console.WriteLine("================");
             Console.WriteLine("     SCHOOL     ");
